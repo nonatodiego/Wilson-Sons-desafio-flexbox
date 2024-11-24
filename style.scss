@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Kite+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap');
+
+// Variables
+$primary-color: #D9D9D9;
+$secondary-color: #001C43;
+$font-primary: "Inika", serif;
+$font-secondary: "Kite One", sans-serif;
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;   
+}
+
+// Header
+header {
+    @include flex-center;
+    justify-content: space-between;
+    background-color: $primary-color;
+    font-family: $font-primary;
+    font-weight: 400;
+    font-style: normal;
+
+    img {
+        margin: 50px 0;    
+    }
+
+    nav ul {
+        @include flex-center;
+        list-style: none;
+        margin: 50px 0;
+
+        li {
+            margin: 0 20px;
+            font-size: 32px;
+            font-family: $font-secondary;
+            font-weight: 400;
+
+            a {
+                text-decoration: none;
+                color: black;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+// Main Section
+main section {
+    @include flex-center;
+    align-items: center;
+    font-family: $font-primary;
+    gap: 50px;
+    padding: 40px;
+
+    .texto {
+        @include flex-center;
+        flex-direction: column;
+        gap: 15px;
+        font-family: $font-primary;
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 24px;
+            font-weight: 400;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .btn {
+            background-color: $primary-color;
+            border-radius: 50px;
+            width: 200px;
+            font-family: $font-primary;
+            font-weight: bold;
+            font-size: 32px;
+            padding: 20px;
+            text-align: center;
+
+            a {
+                text-decoration: none;
+                color: black;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+// Footer
+footer {
+    @include flex-center;
+    color: #fff;
+    padding: 40px;
+    background-color: $secondary-color;
+    font-family: $font-primary;
+    font-weight: 400;
+    font-style: normal;
+}
